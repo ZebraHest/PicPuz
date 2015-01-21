@@ -1,17 +1,31 @@
 package com.picpuz.tastyzebra.picpuz;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 
 public class FrontActivity extends ActionBarActivity {
 
+    Button button;
+    ImageView image;
+    boolean first = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_front);
+
+        addListenerButton();
+
+
     }
 
 
@@ -33,4 +47,35 @@ public class FrontActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void addListenerButton(){
+        image = (ImageView) findViewById(R.id.imageView1);
+
+
+
+        button = (Button) findViewById(R.id.button1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(first){
+                    image.setImageResource(R.drawable.mess);
+                    image.setCropToPadding(true);
+                    first = false;
+                }else{
+                    image.setImageResource(R.drawable.mess);
+                    first = true;
+                }
+
+            }
+        });
+
+    }
+
+    public ImageView[] cutPicture(ImageView d){
+
+
+
+        return null;
+    }
+
 }
