@@ -62,7 +62,7 @@ public class FrontActivity extends ActionBarActivity {
                     image.setCropToPadding(true);
                     first = false;
                 }else{
-                    image.setImageResource(R.drawable.mess);
+                    image.setImageResource(R.drawable.ic_launcher);
                     first = true;
                 }
 
