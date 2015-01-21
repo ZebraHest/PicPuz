@@ -72,7 +72,7 @@ public class FrontActivity extends ActionBarActivity {
     }
 
     public ImageView[] cutPicture(ImageView d){
-
+        ImageView lars;
 
 
         return null;
